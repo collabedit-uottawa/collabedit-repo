@@ -10,7 +10,8 @@ def resize(clip, size):
     return clip.resize(height=size)
 
 def save(clip):
-    clip.write_videofile(trimFName + "_new.mp4")
+    newName = trimFName + "_new.mp4"
+    clip.write_videofile(newName)
 
 def changeAudio(clip, audio):
     clip.audio = audio
@@ -20,13 +21,11 @@ fname = "files/video.mp4"
 audioName = "files/audio.mp3"
 trimFName = fname[0:-4]
 clip = VideoFileClip(fname)
-a = AudioFileClip(audioName)
+audio = AudioFileClip(audioName)
 
-addedAudio = changeAudio(clip, a)
+# clip = changeAudio(clip, audio)
+# clip = trim(clip, 0, 5)
+clip = resize(clip, 144)
+save(clip)
 
-trimmed = trim(addedAudio, 0, 5)
-
-size = resize(trimmed, 360)
-save(size)
-
-extractAudio(size)
+# extractAudio(size)

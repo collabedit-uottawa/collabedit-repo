@@ -51,6 +51,7 @@ button {
 }
 
 .resize,
+.edit,
 .change,
 .trim {
     display: block;
@@ -63,29 +64,13 @@ button {
 }
 
 #resizeBtn,
-#changeBtn,
+#changeAudioBtn,
 #trimBtn{
     padding-top: 10%;
 }
 
-#resizeBtn{
-    padding-top: 10%;
+#homeBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-/* .resize {
-    float: left;
-    height: 300px;
-    color: white;
-    padding: 10px;
-    width:30%;
-}
-
-.change{
-    float: left;
-    height: 300px;
-    color: white;
-    padding: 10px;
-    width:30%;
-} */
-

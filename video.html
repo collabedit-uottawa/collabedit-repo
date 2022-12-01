@@ -3,18 +3,18 @@
 <head>
     <title>Video Editor</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type = "text/javascript" src="editor.js"></script>  
 </head>
-
-
 <body>
 
 <ul>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">Save</a></li>
+    <li><a href="home.html">Home</a></li>
+    <li onclick="saving()"><a href="home.html">Save</a></li>
 </ul>
 
-<video width="900" controls>
-    <source src="files/test.mp4" type="video/mp4">
+<video id="video" width="900" controls>
+    <source src="files/video.mp4" type="video/mp4">
 </video>
 
 <div class='container'>
@@ -30,7 +30,7 @@
         </div>
         
         <div id="trimBtn"> 
-            <button>Apply</button>
+            <button onclick = "trim()">Apply</button>
         </div>
     </div>
 
@@ -41,7 +41,7 @@
             <input type="number"/>
         </div>        
         <div id="resizeBtn"> 
-            <button>Apply</button>
+            <button onclick = "qualityResize()">Apply</button>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
             <p>Audio file name</p>
             <input type="text"/>
         </div>   
-        <div id="resizeBtn"> 
-            <button>Apply</button>
+        <div id="changeAudioBtn"> 
+            <button onclick = "changeAudio()">Apply</button>
         </div>
     </div>
 </div>
