@@ -9,6 +9,9 @@ def extractAudio(clip):
 def resize(clip, size):
     return clip.resize(height=size)
 
+def speedup(clip, speed):
+    return clip.fx(vfx.speedx, speed)
+
 def save(clip):
     newName = trimFName + "_new.mp4"
     clip.write_videofile(newName)

@@ -19,6 +19,11 @@ function qualityResize() {
     video.src = "edits/videoResize.mp4"
 }
 
+function qualitySpeed() {
+    var video = document.getElementById('video');
+    video.src = "edits/videoSpeed.mp4"
+}
+
 function changeAudio() {
     var video = document.getElementById('video');
     video.src = "edits/videoAudio.mp4"
